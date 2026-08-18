@@ -52,7 +52,7 @@ header p{font-size:1.02rem;color:var(--gris);max-width:600px;margin:0 auto}
 .card.wide .wide-l{flex:0 0 300px;display:flex;flex-direction:column;justify-content:center}
 .card.wide .wide-r{flex:1;display:flex;align-items:center}
 .card.wide .wide-r ul{width:100%}
-.card.wide .price{font-size:2.4rem}
+.card.wide .price{font-size:2.6rem;color:var(--oro)}
 .card.wide h3{font-size:1.5rem}
 @media(max-width:760px){.card.wide{flex-direction:column;gap:0}.card.wide .wide-l{flex:auto}}
 .card{background:#fff;border-radius:15px;padding:26px 24px;border:1.5px solid rgba(34,59,99,.13);
@@ -63,8 +63,14 @@ header p{font-size:1.02rem;color:var(--gris);max-width:600px;margin:0 auto}
   font-weight:700;padding:4px 14px;border-radius:20px;white-space:nowrap}
 .card h3{font-size:1.22rem;margin-bottom:3px}
 .card .kind{font-size:.78rem;color:var(--verde);font-weight:600;margin-bottom:14px}
-.price{font-family:'Playfair Display';font-weight:700;color:var(--azul);font-size:2.15rem;line-height:1}
+.price{font-family:'Playfair Display';font-weight:700;color:var(--oro);font-size:2.3rem;line-height:1}
+.p-modo{font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--oro);
+  font-weight:700;margin-top:5px}
+.p-alt{font-size:.79rem;color:#8a9099;margin-top:5px}
 .price small{font-size:.72rem;font-weight:400;color:var(--gris);font-family:'Montserrat';display:block;margin-top:3px}
+.desc-pago{font-size:.78rem;color:var(--verde);font-weight:600;margin:6px 0 0;
+  padding:5px 9px;background:rgba(108,123,104,.11);border-radius:6px;display:inline-block}
+.desc-pago b{color:#2d6a4f}
 .card2{font-size:.8rem;color:var(--gris);margin:8px 0 15px;padding-bottom:14px;border-bottom:1px solid rgba(73,80,87,.11)}
 .card2 b{color:var(--azul)}
 .card ul{list-style:none;flex:1}
@@ -89,7 +95,9 @@ header p{font-size:1.02rem;color:var(--gris);max-width:600px;margin:0 auto}
 .mrow{display:flex;gap:26px;flex-wrap:wrap}
 .mbox{flex:1;min-width:210px;background:rgba(255,255,255,.08);border-radius:11px;padding:19px 22px}
 .mbox .n{font-size:.85rem;color:rgba(245,242,236,.8);margin-bottom:5px}
-.mbox .v{font-family:'Playfair Display';font-weight:700;color:var(--oro);font-size:1.85rem;line-height:1}
+.mbox .v{font-family:'Playfair Display';font-weight:700;color:var(--oro);font-size:1.95rem;line-height:1}
+.mbox .modo{font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;color:var(--oro);font-weight:700;margin-top:4px}
+.mbox .alt{font-size:.76rem;color:rgba(245,242,236,.6);margin-top:4px}
 .mbox .v span{font-size:.8rem;font-weight:400;color:rgba(245,242,236,.7);font-family:'Montserrat'}
 .mbox .t{font-size:.76rem;color:rgba(245,242,236,.6);margin-top:5px}
 .minc{margin-top:20px;padding-top:18px;border-top:1px solid rgba(199,165,90,.28);
@@ -145,7 +153,7 @@ footer b{color:var(--oro);font-family:'Playfair Display'}
     <a class="btn-cta" href="https://wa.me/525639560537?text=Hola%2C%20quiero%20mi%20diagn%C3%B3stico%20gratuito.">Agendar diagnóstico gratuito por WhatsApp</a>
     <div class="hero-nota">Sin costo y sin compromiso · Le mostramos cómo lo ve hoy un paciente que lo busca en Google</div>
   </div>
-  <div class="ads-nota"><b>Sobre el "+ ADS":</b> el presupuesto de anuncios lo paga usted directo a Google, desde su propia cuenta. Nunca pasa por nosotros y usted mantiene el control total de lo que invierte.</div>
+  <div class="ads-nota"><b>Sobre el "+ ADS":</b> el presupuesto de anuncios lo paga usted directo a Google, desde su propia cuenta. Nunca pasa por nosotros y usted mantiene el control total de lo que invierte.<br><br><b>Sobre los precios:</b> los montos destacados son el precio con <b>descuento por pago mediante transferencia</b>. El precio de lista aplica para pago con tarjeta o a meses.</div>
 </header>
 
 <div class="wrap">
@@ -160,7 +168,9 @@ footer b{color:var(--oro);font-family:'Playfair Display'}
   <div class="cards">
     <div class="card">
       <h3>Presencia</h3><div class="kind">Que te encuentren</div>
-      <div class="price">$6,500<small>+ ADS · pago único · $6,800 con tarjeta</small></div>
+      <div class="price">$6,500</div>
+      <div class="p-modo">Por transferencia · + ADS</div>
+      <div class="p-alt">$6,800 con tarjeta o pago a meses</div>
       <div class="card2">Que lo encuentren los pacientes que ya lo están buscando</div>
       <ul>
         <li>Su consultorio en <b>Google Maps</b>, con fotos, horarios, teléfono y servicios</li>
@@ -175,7 +185,9 @@ footer b{color:var(--oro);font-family:'Playfair Display'}
 
     <div class="card feat">
       <h3>Impulso</h3><div class="kind">Convertir presencia en oportunidades</div>
-      <div class="price">$13,999<small>+ ADS · pago único · $14,600 con tarjeta</small></div>
+      <div class="price">$13,999</div>
+      <div class="p-modo">Por transferencia · + ADS</div>
+      <div class="p-alt">$14,600 con tarjeta o pago a meses</div>
       <div class="card2">Aparecer, convertir el interés en contacto y medir qué funciona</div>
       <ul>
         <li>Todo lo de <b>Presencia</b></li>
@@ -190,7 +202,9 @@ footer b{color:var(--oro);font-family:'Playfair Display'}
 
     <div class="card">
       <h3>Territorio Digital</h3><div class="kind">Un activo digital propio</div>
-      <div class="price">$19,999<small>+ ADS · pago único · $20,900 con tarjeta</small></div>
+      <div class="price">$19,999</div>
+      <div class="p-modo">Por transferencia · + ADS</div>
+      <div class="p-alt">$20,900 con tarjeta o pago a meses</div>
       <div class="card2">El lugar donde el paciente decide si le escribe</div>
       <ul>
         <li>Un <b>sitio de 5 a 6 secciones:</b> inicio, quién es usted, servicios, reseñas, ubicación y contacto</li>
@@ -209,7 +223,9 @@ footer b{color:var(--oro);font-family:'Playfair Display'}
   <div class="card wide">
     <div class="wide-l">
       <h3>Ecosistema</h3><div class="kind">Todo conectado</div>
-      <div class="price">$28,999<small>+ ADS · pago único · $30,300 con tarjeta</small></div>
+      <div class="price">$28,999</div>
+      <div class="p-modo">Por transferencia · + ADS</div>
+      <div class="p-alt">$30,300 con tarjeta o pago a meses</div>
       <div class="card2" style="border-bottom:none;padding-bottom:0">Todo el recorrido del paciente, de la búsqueda a la consulta</div>
       <div class="ahorro">Por separado: $33,998 · <b>Ahorra $4,999</b></div>
     </div>
@@ -230,12 +246,16 @@ footer b{color:var(--oro);font-family:'Playfair Display'}
       <div class="mbox">
         <div class="n">Contratando cualquier arranque</div>
         <div class="v">$3,500 <span>/ mes</span></div>
-        <div class="t">$3,750 con tarjeta · precio respetado mientras sea cliente</div>
+        <div class="modo">Por transferencia</div>
+        <div class="alt">$3,750 con tarjeta</div>
+        <div class="t">Este precio se respeta mientras sea cliente</div>
       </div>
       <div class="mbox">
         <div class="n">Solo acompañamiento</div>
         <div class="v">$4,500 <span>/ mes</span></div>
-        <div class="t">$4,750 con tarjeta · sin arranque previo</div>
+        <div class="modo">Por transferencia</div>
+        <div class="alt">$4,750 con tarjeta</div>
+        <div class="t">Sin haber contratado un arranque</div>
       </div>
     </div>
     <div class="minc">
@@ -304,7 +324,9 @@ footer b{color:var(--oro);font-family:'Playfair Display'}
   <div class="cards">
     <div class="card">
       <h3>Presencia</h3><div class="kind">Que encuentren la clínica</div>
-      <div class="price">$8,999<small>+ ADS · pago único · $9,400 con tarjeta</small></div>
+      <div class="price">$8,999</div>
+      <div class="p-modo">Por transferencia · + ADS</div>
+      <div class="p-alt">$9,400 con tarjeta o pago a meses</div>
       <div class="card2">Que encuentren la clínica quienes ya buscan sus servicios</div>
       <ul>
         <li>La clínica en <b>Google Maps</b>, con fotos, horarios, teléfono y servicios</li>
@@ -319,7 +341,9 @@ footer b{color:var(--oro);font-family:'Playfair Display'}
 
     <div class="card feat">
       <h3>Impulso</h3><div class="kind">Convertir presencia en oportunidades</div>
-      <div class="price">$18,999<small>+ ADS · pago único · $19,850 con tarjeta</small></div>
+      <div class="price">$18,999</div>
+      <div class="p-modo">Por transferencia · + ADS</div>
+      <div class="p-alt">$19,850 con tarjeta o pago a meses</div>
       <div class="card2">Aparecer, convertir el interés en contacto y medir qué funciona</div>
       <ul>
         <li>Todo lo de <b>Presencia</b></li>
@@ -334,7 +358,9 @@ footer b{color:var(--oro);font-family:'Playfair Display'}
 
     <div class="card">
       <h3>Territorio Digital</h3><div class="kind">Un activo digital propio</div>
-      <div class="price">$24,999<small>+ ADS · pago único · $26,100 con tarjeta</small></div>
+      <div class="price">$24,999</div>
+      <div class="p-modo">Por transferencia · + ADS</div>
+      <div class="p-alt">$26,100 con tarjeta o pago a meses</div>
       <div class="card2">El lugar donde el paciente decide si les escribe</div>
       <ul>
         <li>Un <b>sitio de 5 a 6 secciones:</b> inicio, la clínica, servicios, equipo médico, reseñas y contacto</li>
@@ -356,7 +382,9 @@ footer b{color:var(--oro);font-family:'Playfair Display'}
       <div class="mbox">
         <div class="n">Contratando cualquier arranque</div>
         <div class="v">$4,900 <span>/ mes</span></div>
-        <div class="t">$5,150 con tarjeta · precio respetado mientras sea cliente</div>
+        <div class="modo">Por transferencia</div>
+        <div class="alt">$5,150 con tarjeta</div>
+        <div class="t"><b class="ahorro-t">Precio con transferencia</b> · lista $5,150 · se respeta mientras sea cliente</div>
       </div>
       <div class="mbox">
         <div class="n">Por servicio adicional en campaña</div>
