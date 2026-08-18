@@ -29,6 +29,19 @@ header p{font-size:1.02rem;color:var(--gris);max-width:600px;margin:0 auto}
 .tbtn.on{background:var(--azul);color:#fff}
 .tbtn small{display:block;font-size:.72rem;font-weight:400;opacity:.75;margin-top:2px}
 
+.hero-cta{margin:26px 0 18px}
+.btn-cta{display:inline-block;text-decoration:none;background:var(--oro);color:#1A2E4D;font-weight:700;font-size:1.02rem;
+  padding:17px 40px;border-radius:10px;border:2px solid var(--oro);transition:.2s;box-shadow:0 3px 14px rgba(199,165,90,.28)}
+.btn-cta:hover{background:#fff;border-color:#fff}
+.hero-nota{margin-top:11px;font-size:.87rem;color:var(--verde)}
+.ads-nota{max-width:660px;margin:0 auto;background:#fff;border-left:3px solid var(--azulc);
+  border-radius:0 10px 10px 0;padding:13px 18px;font-size:.85rem;text-align:left}
+.ads-nota b{color:var(--azul)}
+.cta-mid{text-align:center;margin:6px 0 32px}
+.cta-mid a{display:inline-block;text-decoration:none;background:var(--azul);color:#fff;font-weight:600;font-size:.97rem;
+  padding:15px 36px;border-radius:9px;border:2px solid var(--azul);transition:.2s}
+.cta-mid a:hover{background:var(--oro);border-color:var(--oro)}
+.cta-mid .sub{display:block;margin-top:9px;font-size:.83rem;color:var(--verde)}
 .pane{display:none}
 .pane.on{display:block}
 
@@ -59,6 +72,15 @@ header p{font-size:1.02rem;color:var(--gris);max-width:600px;margin:0 auto}
 .card li::before{content:"✓";position:absolute;left:0;color:var(--verde);font-weight:700}
 .card li.mas{color:var(--azul);font-weight:600}
 .card li.mas::before{content:"+";color:var(--oro)}
+.card li.extra{max-height:0;opacity:0;padding-top:0;padding-bottom:0;overflow:hidden;
+  transition:max-height .35s ease,opacity .3s ease,padding .3s ease}
+.card:hover li.extra,.card.abierta li.extra{max-height:120px;opacity:1;padding-top:6px;padding-bottom:6px}
+.card.abierta .mas-info{opacity:1}
+@media(hover:none){.card{cursor:pointer}.mas-info{padding:7px;background:rgba(199,165,90,.1);border-radius:7px}}
+.mas-info{font-size:.76rem;color:var(--oro);font-weight:600;margin-top:9px;text-align:center;
+  transition:opacity .25s ease}
+.card:hover .mas-info{opacity:0}
+@media(hover:none){.card:hover .mas-info{opacity:1}}
 
 /* MENSUAL */
 .mens{background:var(--azul);border-radius:15px;padding:30px 32px;color:var(--marfil);margin-bottom:26px}
@@ -103,6 +125,9 @@ td b{color:var(--azul)}
   padding:15px 20px;font-size:.88rem;margin-bottom:24px}
 .nota-cli b{color:var(--azul)}
 
+.cta-final-bloque{background:var(--azul);text-align:center;padding:52px 0 56px;margin-top:10px}
+.cf-t{font-family:'Playfair Display',serif;font-size:1.85rem;color:#fff;font-weight:600;margin-bottom:10px}
+.cf-s{font-size:.98rem;color:rgba(245,242,236,.82);max-width:520px;margin:0 auto 26px}
 footer{background:var(--azul);color:rgba(245,242,236,.72);text-align:center;padding:26px 0;font-size:.85rem;margin-top:20px}
 footer b{color:var(--oro);font-family:'Playfair Display'}
 @media(max-width:640px){header h1{font-size:1.7rem}.tbtn{padding:13px 24px;font-size:.9rem}}
@@ -114,8 +139,13 @@ footer b{color:var(--oro);font-family:'Playfair Display'}
 </div></nav>
 
 <header class="wrap">
-  <h1>Su inversión</h1>
-  <p><b>No vendemos herramientas sueltas.</b> Diseñamos un sistema para que su presencia digital sea medible, ordenada y orientada a generar consultas reales.<br><span style="font-size:.88rem;color:var(--verde)">Precios por transferencia; con tarjeta o meses aplica ajuste por comisión bancaria.</span></p>
+  <h1>Convierta su presencia digital<br>en consultas medibles</h1>
+  <p><b>No vendemos herramientas sueltas.</b> Diseñamos un sistema para que su presencia digital sea medible, ordenada y orientada a generar consultas reales.</p>
+  <div class="hero-cta">
+    <a class="btn-cta" href="https://wa.me/525639560537?text=Hola%2C%20quiero%20mi%20diagn%C3%B3stico%20gratuito.">Agendar diagnóstico gratuito por WhatsApp</a>
+    <div class="hero-nota">Sin costo y sin compromiso · Le mostramos cómo lo ve hoy un paciente que lo busca en Google</div>
+  </div>
+  <div class="ads-nota"><b>Sobre el "+ ADS":</b> el presupuesto de anuncios lo paga usted directo a Google, desde su propia cuenta. Nunca pasa por nosotros y usted mantiene el control total de lo que invierte.</div>
 </header>
 
 <div class="wrap">
@@ -137,9 +167,10 @@ footer b{color:var(--oro);font-family:'Playfair Display'}
         <li><b>Anuncios en Google</b> que aparecen cuando alguien de su zona busca su especialidad</li>
         <li>Elegimos <b>las palabras exactas</b> que sus pacientes escriben al buscar</li>
         <li>Revisamos que todo <b>cumpla las reglas</b> de Google y de COFEPRIS</li>
-        <li>Le decimos <b>cuántas personas lo contactaron</b> y desde dónde llegaron</li>
-        <li><b>Junta a los 30 días</b> para revisar resultados</li>
+        <li class="extra">Le decimos <b>cuántas personas lo contactaron</b> y desde dónde llegaron</li>
+        <li class="extra"><b>Junta a los 30 días</b> para revisar resultados</li>
       </ul>
+      <div class="mas-info">↓ pase el cursor para ver todo lo que incluye</div>
     </div>
 
     <div class="card feat">
@@ -151,9 +182,10 @@ footer b{color:var(--oro);font-family:'Playfair Display'}
         <li class="mas">Una <b>página de aterrizaje</b> a donde llega quien da clic en su anuncio</li>
         <li class="mas"><b>Botón de WhatsApp</b> que registra de qué anuncio vino cada paciente</li>
         <li class="mas"><b>Encuesta automática</b> después de la consulta, para saber cómo se sintió</li>
-        <li class="mas"><b>Sistema de reseñas:</b> invitamos a sus pacientes a calificarlo en Google</li>
-        <li class="mas"><b>Dominio propio</b> a su nombre, primer año incluido</li>
+        <li class="extra mas"><b>Sistema de reseñas:</b> invitamos a sus pacientes a calificarlo en Google</li>
+        <li class="extra mas"><b>Dominio propio</b> a su nombre, primer año incluido</li>
       </ul>
+      <div class="mas-info">↓ pase el cursor para ver todo lo que incluye</div>
     </div>
 
     <div class="card">
@@ -165,10 +197,11 @@ footer b{color:var(--oro);font-family:'Playfair Display'}
         <li><b>Textos escritos para el paciente</b> y revisados para cumplir COFEPRIS</li>
         <li>Configurado para que <b>Google lo encuentre</b> y lo muestre en las búsquedas de su especialidad</li>
         <li><b>Cada sección lleva al mismo lugar:</b> que le escriban por WhatsApp</li>
-        <li>Usted ve <b>cuánta gente entra, qué lee y cuántos le escriben</b></li>
-        <li><b>Listo para recibir campañas</b> sin tener que rehacerlo después</li>
-        <li><b>Dominio y hosting</b> del primer año, a su nombre</li>
+        <li class="extra">Usted ve <b>cuánta gente entra, qué lee y cuántos le escriben</b></li>
+        <li class="extra"><b>Listo para recibir campañas</b> sin tener que rehacerlo después</li>
+        <li class="extra"><b>Dominio y hosting</b> del primer año, a su nombre</li>
       </ul>
+      <div class="mas-info">↓ pase el cursor para ver todo lo que incluye</div>
     </div>
 
   </div>
@@ -230,6 +263,11 @@ footer b{color:var(--oro);font-family:'Playfair Display'}
     </div>
   </div>
 
+  <div class="cta-mid">
+    <a href="https://wa.me/525639560537?text=Hola%2C%20quiero%20saber%20qu%C3%A9%20plan%20me%20conviene.">Quiero saber qué plan me conviene</a>
+    <span class="sub">Le armamos su diagnóstico gratuito y lo revisamos juntos</span>
+  </div>
+
   <div class="add">
     <h3>De dónde sale el valor de Impulso</h3>
       <p style="font-size:.87rem;color:var(--gris);margin-bottom:12px">Precio de referencia si cada pieza se contratara por su cuenta. El sistema completo cuesta menos porque las piezas se diseñan para trabajar juntas.</p>
@@ -273,9 +311,10 @@ footer b{color:var(--oro);font-family:'Playfair Display'}
         <li><b>Anuncios en Google</b> que aparecen cuando alguien de la zona busca sus servicios</li>
         <li>Elegimos <b>las palabras exactas</b> que los pacientes escriben al buscar</li>
         <li>Revisamos que todo <b>cumpla las reglas</b> de Google y de COFEPRIS</li>
-        <li>Les decimos <b>cuántas personas contactaron</b> y desde dónde llegaron</li>
-        <li><b>Junta a los 30 días</b> para revisar resultados</li>
+        <li class="extra">Les decimos <b>cuántas personas contactaron</b> y desde dónde llegaron</li>
+        <li class="extra"><b>Junta a los 30 días</b> para revisar resultados</li>
       </ul>
+      <div class="mas-info">↓ pase el cursor para ver todo lo que incluye</div>
     </div>
 
     <div class="card feat">
@@ -287,9 +326,10 @@ footer b{color:var(--oro);font-family:'Playfair Display'}
         <li class="mas">Una <b>página de aterrizaje</b> a donde llega quien da clic en el anuncio</li>
         <li class="mas"><b>Botón de WhatsApp</b> que registra de qué anuncio vino cada paciente</li>
         <li class="mas"><b>Encuesta automática</b> después de la consulta, para saber cómo se sintió</li>
-        <li class="mas"><b>Sistema de reseñas:</b> invitamos a los pacientes a calificarlos en Google</li>
-        <li class="mas"><b>Dominio propio</b> a nombre de la clínica, primer año incluido</li>
+        <li class="extra mas"><b>Sistema de reseñas:</b> invitamos a los pacientes a calificarlos en Google</li>
+        <li class="extra mas"><b>Dominio propio</b> a nombre de la clínica, primer año incluido</li>
       </ul>
+      <div class="mas-info">↓ pase el cursor para ver todo lo que incluye</div>
     </div>
 
     <div class="card">
@@ -301,10 +341,11 @@ footer b{color:var(--oro);font-family:'Playfair Display'}
         <li><b>Textos escritos para el paciente</b> y revisados para cumplir COFEPRIS</li>
         <li>Configurado para que <b>Google lo encuentre</b> y lo muestre en las búsquedas de sus servicios</li>
         <li><b>Cada sección lleva al mismo lugar:</b> que les escriban por WhatsApp</li>
-        <li>Ven <b>cuánta gente entra, qué lee y cuántos escriben</b></li>
-        <li><b>Listo para recibir campañas</b> sin tener que rehacerlo después</li>
-        <li><b>Dominio y hosting</b> del primer año, a nombre de la clínica</li>
+        <li class="extra">Ven <b>cuánta gente entra, qué lee y cuántos escriben</b></li>
+        <li class="extra"><b>Listo para recibir campañas</b> sin tener que rehacerlo después</li>
+        <li class="extra"><b>Dominio y hosting</b> del primer año, a nombre de la clínica</li>
       </ul>
+      <div class="mas-info">↓ pase el cursor para ver todo lo que incluye</div>
     </div>
   </div>
 
@@ -348,6 +389,11 @@ footer b{color:var(--oro);font-family:'Playfair Display'}
     </div>
   </div>
 
+  <div class="cta-mid">
+    <a href="https://wa.me/525639560537?text=Hola%2C%20quiero%20saber%20qu%C3%A9%20plan%20me%20conviene.">Quiero saber qué plan me conviene</a>
+    <span class="sub">Le armamos su diagnóstico gratuito y lo revisamos juntos</span>
+  </div>
+
   <div class="add">
     <h3>Complementos para clínica</h3>
     <table>
@@ -362,16 +408,41 @@ footer b{color:var(--oro);font-family:'Playfair Display'}
   <div class="note"><b>Ejemplo:</b> una clínica que quiere posicionar su marca más dos servicios específicos (ortodoncia e implantes) invierte $18,999 + $3,500 de arranque, y $4,900 + $1,000 al mes.</div>
 </div></div>
 
+<div class="cta-final-bloque">
+  <div class="wrap">
+    <div class="cf-t">¿Le mostramos cómo lo ve hoy un paciente?</div>
+    <div class="cf-s">El diagnóstico es gratuito, dura 15 minutos y no tiene compromiso. Usted decide después.</div>
+    <a class="btn-cta" href="https://wa.me/525639560537?text=Hola%2C%20quiero%20agendar%20mi%20diagn%C3%B3stico%20gratuito.">Agendar mi diagnóstico gratuito</a>
+  </div>
+</div>
+
 <footer>
   <b>Tepal Market</b> · El presupuesto de anuncios lo paga usted directo a Google, nunca pasa por nosotros<br>
   <span style="font-size:.8rem">Nunca prometemos primeros lugares ni un número garantizado de pacientes</span>
 </footer>
 
 <script>
+// Toque en móvil: expande la tarjeta al tocarla
+function initTactil(){
+  if (!window.matchMedia('(hover: none)').matches) return;
+  document.querySelectorAll('.card').forEach(c=>{
+    const info = c.querySelector('.mas-info');
+    if(!info) return;
+    info.textContent = '↓ toque para ver todo lo que incluye';
+    c.addEventListener('click', e=>{
+      if(e.target.closest('a')) return;
+      c.classList.toggle('abierta');
+      const abierta = c.classList.contains('abierta');
+      info.textContent = abierta ? '↑ toque para cerrar' : '↓ toque para ver todo lo que incluye';
+    });
+  });
+}
+
 function sw(i){
   document.querySelectorAll('.tbtn').forEach((b,j)=>b.classList.toggle('on',i===j));
   document.querySelectorAll('.pane').forEach((p,j)=>p.classList.toggle('on',i===j));
   window.scrollTo({top:0,behavior:'smooth'});
 }
+initTactil();
 </script>
 </body></html>
