@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Inversiones Tepal Market para gestión estratégica de redes sociales y autoridad médica.">
+<title>Tepal Market · Autoridad Médica</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --dark:#0C131A;
+  --dark2:#101A26;
+  --dark3:#171F28;
+  --card:#141E2B;
+  --linea:rgba(184,167,126,.18);
+  --oro:#C7A55A;
+  --oro-b:#D9C08A;
+  --marfil:#F5F2EC;
+  --texto:#C5CDD8;
+  --texto2:#8792A3;
+  --verde:#8FA07E;
+  --azul:#223B63;
+  --gris:#495057;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Montserrat',sans-serif;color:var(--texto);background:var(--dark);line-height:1.55}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:'Playfair Display',serif;color:#fff;line-height:1.2}
+.nav{background:#0A1017;padding:18px 0;border-bottom:1px solid var(--linea);position:sticky;top:0;z-index:20}
+.nav .wrap{display:flex;justify-content:space-between;align-items:center;gap:18px}
+.nav .logo{font-family:'Playfair Display';color:#fff;font-size:1.25rem;font-weight:600}
+.nav .logo span{color:var(--oro)}
+.nav .tag{color:rgba(245,242,236,.7);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;text-align:right}
+header{text-align:center;padding:46px 0 34px;background:linear-gradient(170deg,#0A1017 0%,var(--dark2) 100%)}
+header h1{font-size:2.3rem;margin-bottom:10px;color:#fff}
+header p{font-size:1.02rem;color:var(--texto);max-width:680px;margin:0 auto}
+.hero-logo{width:210px;margin:0 auto 20px;display:block}
+.hero-cta{margin:26px 0 18px}
+.btn-cta{display:inline-block;text-decoration:none;background:var(--oro);color:#1A2E4D;font-weight:700;font-size:1.02rem;padding:17px 40px;border-radius:10px;border:2px solid var(--oro);transition:.2s;box-shadow:0 3px 14px rgba(199,165,90,.28)}
+.btn-cta:hover{background:#fff;border-color:#fff;transform:translateY(-2px)}
+.hero-nota{margin-top:11px;font-size:.87rem;color:var(--verde)}
+.ads-nota{max-width:760px;margin:0 auto;background:rgba(255,255,255,.05);border-left:3px solid var(--oro);border-radius:0 10px 10px 0;padding:13px 18px;font-size:.85rem;text-align:left}
+.ads-nota b{color:var(--oro-b)}
+.section-intro{text-align:center;padding:34px 0 26px}
+.section-intro h2{font-size:1.75rem;margin-bottom:8px}
+.section-intro p{max-width:700px;margin:0 auto;color:var(--texto2);font-size:.93rem}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-bottom:28px}
+.card{background:var(--card);border-radius:15px;padding:26px 24px;border:1.5px solid var(--linea);display:flex;flex-direction:column;transition:background .3s ease,border-color .3s ease,box-shadow .3s ease,transform .3s ease}
+.card:hover,.card.abierta{background:#fff;border-color:var(--oro);transform:translateY(-4px);box-shadow:0 14px 40px rgba(0,0,0,.45)}
+.card.feat{border-color:var(--oro);border-width:2.5px;position:relative;background:rgba(199,165,90,.06)}
+.card.feat:hover,.card.feat.abierta{background:#fff}
+.card.feat::before{content:"Recomendado";position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--oro);color:#fff;font-size:.66rem;letter-spacing:.07em;text-transform:uppercase;font-weight:700;padding:4px 14px;border-radius:20px;white-space:nowrap}
+.card h3{font-size:1.22rem;margin-bottom:3px;color:#fff;transition:color .3s ease}
+.card:hover h3,.card.abierta h3{color:var(--azul)}
+.card .kind{font-size:.78rem;color:var(--verde);font-weight:600;margin-bottom:14px;transition:color .3s ease}
+.card:hover .kind,.card.abierta .kind{color:#6C7B68}
+.price{font-family:'Playfair Display';font-weight:700;color:var(--oro);font-size:2.3rem;line-height:1}
+.p-modo{font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--oro);font-weight:700;margin-top:5px}
+.p-alt{font-size:.79rem;color:var(--texto2);margin-top:5px;transition:color .3s ease}
+.card:hover .p-alt,.card.abierta .p-alt{color:#8a9099}
+.card2{font-size:.8rem;color:var(--texto2);margin:8px 0 15px;padding-bottom:14px;border-bottom:1px solid var(--linea);transition:color .3s ease,border-color .3s ease}
+.card:hover .card2,.card.abierta .card2{color:var(--gris);border-color:rgba(73,80,87,.14)}
+.card2 b{color:var(--azul)}
+.card ul{list-style:none;flex:1}
+.card li{font-size:.83rem;padding:7px 0 7px 21px;position:relative;line-height:1.45;color:var(--texto);transition:color .3s ease}
+.card:hover li,.card.abierta li{color:var(--gris)}
+.card:hover li b,.card.abierta li b{color:var(--azul)}
+.card li::before{content:"✓";position:absolute;left:0;color:var(--oro);font-weight:700;transition:color .3s ease}
+.card:hover li::before,.card.abierta li::before{color:#6C7B68}
+.card li.extra{max-height:0;opacity:0;padding-top:0;padding-bottom:0;overflow:hidden;transition:max-height .35s ease,opacity .3s ease,padding .3s ease}
+.card:hover li.extra,.card.abierta li.extra{max-height:130px;opacity:1;padding-top:6px;padding-bottom:6px}
+.mas-info{font-size:.76rem;color:var(--oro);font-weight:600;margin-top:9px;text-align:center;transition:opacity .25s ease}
+.card:hover .mas-info{opacity:0}
+@media(hover:none){.card{cursor:pointer}.mas-info{padding:7px;background:rgba(199,165,90,.1);border-radius:7px}.card:hover .mas-info{opacity:1}}
+.mens{background:linear-gradient(150deg,#0A1017 0%,var(--dark3) 100%);border:1.5px solid var(--linea);border-radius:15px;padding:30px 32px;color:var(--marfil);margin-bottom:26px}
+.mens h3{color:#fff;font-size:1.3rem;margin-bottom:5px}
+.mens .st{font-size:.88rem;color:rgba(245,242,236,.75);margin-bottom:20px}
+.mrow{display:flex;gap:26px;flex-wrap:wrap}
+.mbox{flex:1;min-width:210px;background:rgba(255,255,255,.08);border-radius:11px;padding:19px 22px}
+.mbox .n{font-size:.85rem;color:rgba(245,242,236,.8);margin-bottom:5px}
+.mbox .v{font-family:'Playfair Display';font-weight:700;color:var(--oro);font-size:1.7rem;line-height:1.1}
+.mbox .t{font-size:.76rem;color:rgba(245,242,236,.62);margin-top:7px}
+.minc{margin-top:20px;padding-top:18px;border-top:1px solid rgba(199,165,90,.28);display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:9px}
+.minc div{font-size:.85rem;color:rgba(245,242,236,.92);padding-left:19px;position:relative;line-height:1.5}
+.minc div::before{content:"✓";position:absolute;left:0;color:var(--oro);font-weight:700}
+.sistema,.add{background:var(--dark3);border-radius:15px;padding:26px 30px;border:1.5px solid var(--linea);margin-bottom:24px}
+.sistema h3,.add h3{font-size:1.15rem;margin-bottom:6px}
+.sistema .st,.add .st{font-size:.87rem;color:var(--texto2);margin-bottom:18px}
+.flujo{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center}
+.paso{background:rgba(255,255,255,.06);border:1px solid rgba(199,165,90,.35);border-radius:22px;padding:8px 16px;font-size:.82rem;color:var(--marfil);font-weight:600}
+.flecha{color:var(--oro);font-weight:700;font-size:1rem}
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+th{text-align:left;padding:9px 12px;background:rgba(199,165,90,.13);color:var(--oro-b);font-weight:600;font-size:.82rem}
+th.c,td.c{text-align:center}
+td{padding:10px 12px;border-bottom:1px solid var(--linea);color:var(--texto);transition:.2s}
+td b{color:#fff}
+tbody tr{transition:.2s}
+tbody tr:hover{background:#fff}
+tbody tr:hover td{color:var(--gris)}
+tbody tr:hover td b{color:var(--azul)}
+.note{background:rgba(255,255,255,.05);border-left:3px solid var(--oro);border-radius:0 11px 11px 0;padding:16px 20px;font-size:.87rem;margin-bottom:20px;color:var(--texto)}
+.note b{color:var(--oro-b)}
+.cta-mid{text-align:center;margin:12px 0 34px}
+.cta-mid a{display:inline-block;text-decoration:none;background:transparent;color:var(--oro);font-weight:600;font-size:.97rem;padding:15px 36px;border-radius:9px;border:2px solid var(--oro);transition:.2s}
+.cta-mid a:hover{background:var(--oro);color:#0A1017}
+.cta-mid .sub{display:block;margin-top:9px;font-size:.83rem;color:var(--verde)}
+.cta-final-bloque{background:linear-gradient(200deg,#0A1017 0%,var(--dark2) 100%);border-top:1px solid var(--linea);text-align:center;padding:52px 0 56px;margin-top:10px}
+.cf-logo{width:120px;margin:0 auto 16px;display:block;opacity:.92}
+.cf-t{font-family:'Playfair Display',serif;font-size:1.85rem;color:#fff;font-weight:600;margin-bottom:10px}
+.cf-s{font-size:.98rem;color:rgba(245,242,236,.82);max-width:560px;margin:0 auto 26px}
+footer{background:#080D13;border-top:1px solid var(--linea);color:rgba(245,242,236,.72);text-align:center;padding:26px 0;font-size:.85rem}
+footer b{color:var(--oro);font-family:'Playfair Display'}
+@media(max-width:820px){.cards{grid-template-columns:1fr}}
+@media(max-width:640px){
+  .wrap{padding:0 18px}
+  .nav .wrap{align-items:flex-start}
+  .nav .tag{font-size:.62rem;max-width:150px}
+  .hero-logo{width:165px}
+  header{padding:34px 0 28px}
+  header h1{font-size:1.72rem;line-height:1.25}
+  header p{font-size:.95rem}
+  .btn-cta{padding:16px 20px;font-size:.92rem;width:100%;max-width:340px}
+  .ads-nota{font-size:.82rem;padding:12px 15px}
+  .section-intro{padding:28px 0 22px}
+  .section-intro h2{font-size:1.5rem}
+  .card{padding:22px 20px}
+  .price{font-size:2rem}
+  .card li{font-size:.86rem}
+  .mens{padding:24px 20px}
+  .mrow{flex-direction:column;gap:14px}
+  .sistema,.add{padding:22px 18px}
+  .flujo{gap:6px}
+  .paso{font-size:.76rem;padding:7px 12px}
+  .flecha{display:none}
+  table{font-size:.78rem}
+  th,td{padding:8px 7px}
+  .cf-t{font-size:1.45rem}
+  .cf-logo{width:96px}
+}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+  <div class="logo">Tepal <span>Market</span></div>
+  <div class="tag">Autoridad Médica · Redes Sociales</div>
+</div></nav>
+
+<header>
+  <div class="wrap">
+    <img class="hero-logo" src="logo_tepal_dark.png" alt="Tepal Market">
+    <h1>Convierta su conocimiento médico<br>en autoridad digital</h1>
+    <p><b>No publicamos por publicar.</b> Diseñamos un sistema de contenido para que su presencia en redes sea constante, profesional y medible sin consumir su tiempo.</p>
+    <div class="hero-cta">
+      <a class="btn-cta" href="https://wa.me/525639560537?text=Hola%2C%20quiero%20revisar%20la%20estrategia%20de%20redes%20de%20Tepal.">Quiero revisar mi estrategia de redes</a>
+      <div class="hero-nota">Estrategia · Guiones · Edición · Diseño · Publicación · Medición</div>
+    </div>
+    <div class="ads-nota"><b>Sobre el pago:</b> la inversión corresponde al ciclo completo. Puede pagar por transferencia o tarjeta. Las opciones de pago diferido dependen de la tarjeta, el banco y la disponibilidad al momento de generar el enlace.<br><br><b>Sobre resultados:</b> no prometemos seguidores, pacientes ni alcance garantizado. Construimos consistencia, autoridad y un sistema medible de contenido.</div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="section-intro">
+    <h2>Elija el ritmo que sí pueda sostener</h2>
+    <p>La calidad cae cuando el contenido se vuelve una carrera diaria. Por eso trabajamos por ciclos, con grabación por bloques y una carga de producción definida desde el inicio.</p>
+  </div>
+
+  <section class="cards" aria-label="Inversiones de redes sociales">
+    <article class="card">
+      <h3>Ciclo Inicial</h3><div class="kind">Validar la dinámica</div>
+      <div class="price">$33,000</div>
+      <div class="p-modo">3 meses · inversión total</div>
+      <div class="p-alt">Equivale a $11,000 por mes de trabajo</div>
+      <div class="card2">Para empezar sin comprometer un semestre completo.</div>
+      <ul>
+        <li><b>4 Reels</b> editados por mes</li>
+        <li><b>2 carruseles o piezas gráficas</b> por mes</li>
+        <li><b>8 stories</b> derivadas del contenido principal</li>
+        <li>Calendario editorial y <b>4 guiones mensuales</b></li>
+        <li class="extra">Copy, CTA, subtítulos y adaptación para las plataformas acordadas</li>
+        <li class="extra">Programación, publicación y <b>reporte mensual</b></li>
+        <li class="extra"><b>1 revisión estratégica</b> al mes</li>
+      </ul>
+      <div class="mas-info">↓ pase el cursor para ver todo lo que incluye</div>
+    </article>
+
+    <article class="card feat">
+      <h3>Autoridad</h3><div class="kind">Constancia sin quemar la operación</div>
+      <div class="price">$60,000</div>
+      <div class="p-modo">6 meses · inversión total</div>
+      <div class="p-alt">Equivale a $10,000 por mes de trabajo</div>
+      <div class="card2">La opción recomendada para construir una presencia profesional sostenida.</div>
+      <ul>
+        <li><b>4 Reels</b> editados por mes</li>
+        <li><b>2 carruseles o piezas gráficas</b> por mes</li>
+        <li><b>8 stories</b> derivadas del contenido principal</li>
+        <li>Calendario editorial y <b>4 guiones mensuales</b></li>
+        <li class="extra">Copy, CTA, subtítulos y adaptación para las plataformas acordadas</li>
+        <li class="extra">Programación, publicación y <b>reporte mensual</b></li>
+        <li class="extra"><b>1 reunión estratégica</b> al mes para ajustar el siguiente bloque</li>
+      </ul>
+      <div class="mas-info">↓ pase el cursor para ver todo lo que incluye</div>
+    </article>
+
+    <article class="card">
+      <h3>Autoridad Plus</h3><div class="kind">Mayor frecuencia y profundidad</div>
+      <div class="price">$72,000</div>
+      <div class="p-modo">6 meses · inversión total</div>
+      <div class="p-alt">Equivale a $12,000 por mes de trabajo</div>
+      <div class="card2">Para médicos con capacidad real de grabar más y sostener una presencia más intensa.</div>
+      <ul>
+        <li><b>6 Reels</b> editados por mes</li>
+        <li><b>4 carruseles o piezas gráficas</b> por mes</li>
+        <li><b>12 stories</b> derivadas del contenido principal</li>
+        <li>Calendario editorial y <b>6 guiones mensuales</b></li>
+        <li class="extra">Adaptación más profunda por plataforma y optimización de formatos</li>
+        <li class="extra"><b>Análisis competitivo mensual</b> de contenido y posicionamiento</li>
+        <li class="extra">Reporte ampliado y <b>2 revisiones estratégicas</b> al mes</li>
+      </ul>
+      <div class="mas-info">↓ pase el cursor para ver todo lo que incluye</div>
+    </article>
+  </section>
+
+  <section class="mens">
+    <h3>Así protegemos la calidad durante todo el ciclo</h3>
+    <div class="st">El sistema está diseñado para que el contenido no dependa de perseguir al médico cada semana.</div>
+    <div class="mrow">
+      <div class="mbox">
+        <div class="n">Planeación mensual</div>
+        <div class="v">Temas + guiones</div>
+        <div class="t">Definimos con anticipación qué se va a comunicar, con qué objetivo y qué debe grabarse.</div>
+      </div>
+      <div class="mbox">
+        <div class="n">Grabación por bloques</div>
+        <div class="v">Una sola sesión</div>
+        <div class="t">El médico graba varios videos de una vez. Tepal convierte ese material en el contenido del mes.</div>
+      </div>
+    </div>
+    <div class="minc">
+      <div><b>Estrategia editorial</b> alineada a especialidad y audiencia</div>
+      <div><b>Guiones claros</b> para reducir tiempo frente a cámara</div>
+      <div><b>Edición profesional</b> con subtítulos y ritmo para mobile</div>
+      <div><b>Diseño consistente</b> con identidad del médico o clínica</div>
+      <div><b>Revisión de comunicación</b> para evitar promesas clínicas problemáticas</div>
+      <div><b>Medición mensual</b> para decidir qué repetir y qué cambiar</div>
+    </div>
+  </section>
+
+  <section class="sistema">
+    <h3>Cómo funciona el sistema</h3>
+    <div class="st">No son publicaciones aisladas. Cada mes alimenta el siguiente.</div>
+    <div class="flujo">
+      <span class="paso">Objetivo</span><span class="flecha">→</span>
+      <span class="paso">Temas</span><span class="flecha">→</span>
+      <span class="paso">Guiones</span><span class="flecha">→</span>
+      <span class="paso">Grabación por bloques</span><span class="flecha">→</span>
+      <span class="paso">Edición y diseño</span><span class="flecha">→</span>
+      <span class="paso">Publicación</span><span class="flecha">→</span>
+      <span class="paso">Medición</span><span class="flecha">→</span>
+      <span class="paso">Ajuste</span>
+    </div>
+  </section>
+
+  <div class="cta-mid">
+    <a href="https://wa.me/525639560537?text=Hola%2C%20quiero%20saber%20qu%C3%A9%20inversi%C3%B3n%20de%20redes%20me%20conviene.">Quiero saber qué inversión me conviene</a>
+    <span class="sub">Revisamos su situación actual antes de recomendar un ciclo</span>
+  </div>
+
+  <section class="add">
+    <h3>Comparativa rápida</h3>
+    <div class="st">La diferencia principal es la duración del ciclo y la intensidad de producción.</div>
+    <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>Incluye</th><th class="c">Ciclo Inicial</th><th class="c">Autoridad</th><th class="c">Autoridad Plus</th></tr></thead>
+        <tbody>
+          <tr><td><b>Duración</b></td><td class="c">3 meses</td><td class="c">6 meses</td><td class="c">6 meses</td></tr>
+          <tr><td>Reels / mes</td><td class="c">4</td><td class="c">4</td><td class="c">6</td></tr>
+          <tr><td>Carruseles / mes</td><td class="c">2</td><td class="c">2</td><td class="c">4</td></tr>
+          <tr><td>Stories / mes</td><td class="c">8</td><td class="c">8</td><td class="c">12</td></tr>
+          <tr><td>Guiones / mes</td><td class="c">4</td><td class="c">4</td><td class="c">6</td></tr>
+          <tr><td>Reporte mensual</td><td class="c">✓</td><td class="c">✓</td><td class="c">Ampliado</td></tr>
+          <tr><td>Revisión estratégica</td><td class="c">1 / mes</td><td class="c">1 / mes</td><td class="c">2 / mes</td></tr>
+          <tr><td>Análisis competitivo</td><td class="c">—</td><td class="c">Trimestral</td><td class="c">Mensual</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="add">
+    <h3>Qué no está incluido</h3>
+    <div class="st">Definir los límites desde el inicio protege la calidad, el tiempo del médico y la continuidad del servicio.</div>
+    <div class="minc" style="margin-top:0;padding-top:0;border-top:none">
+      <div>Grabación o producción <b>presencial</b></div>
+      <div>Atención médica o respuesta clínica por <b>mensajes directos</b></div>
+      <div>Fotografía profesional o cobertura de <b>eventos</b></div>
+      <div>Contenido o cambios <b>ilimitados</b></div>
+      <div>Inversión en <b>Meta Ads</b> u otra pauta publicitaria</div>
+      <div>Servicios web, Google Ads o automatizaciones no especificadas</div>
+    </div>
+  </section>
+
+  <div class="note"><b>Antes de publicar contenido clínico:</b> el médico conserva la aprobación final sobre información médica y Tepal revisa la comunicación para reducir afirmaciones promocionales o sanitarias problemáticas.</div>
+</main>
+
+<section class="cta-final-bloque">
+  <div class="wrap">
+    <img class="cf-logo" src="logo_tepal_dark.png" alt="Tepal Market">
+    <div class="cf-t">¿Construimos una presencia que sí pueda sostener?</div>
+    <div class="cf-s">Revisamos sus redes, su forma de trabajar y su capacidad de grabación. Después le recomendamos el ciclo adecuado.</div>
+    <a class="btn-cta" href="https://wa.me/525639560537?text=Hola%2C%20quiero%20revisar%20mi%20estrategia%20de%20redes.">Hablar con Tepal por WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><b>Tepal Market</b> · Medicina para tu negocio<br>
+  No garantizamos seguidores, alcance, citas ni pacientes. Medimos y optimizamos con datos verificables.</div>
+</footer>
+
+<script>
+function initTactil(){
+  if (!window.matchMedia('(hover: none)').matches) return;
+  document.querySelectorAll('.card').forEach(c=>{
+    const info=c.querySelector('.mas-info');
+    if(!info) return;
+    info.textContent='↓ toque para ver todo lo que incluye';
+    c.addEventListener('click',e=>{
+      if(e.target.closest('a')) return;
+      c.classList.toggle('abierta');
+      const abierta=c.classList.contains('abierta');
+      info.textContent=abierta?'↑ toque para cerrar':'↓ toque para ver todo lo que incluye';
+    });
+  });
+}
+initTactil();
+</script>
+</body>
+</html>
